@@ -3,6 +3,8 @@
     z-index: 9;
     width: 100%;
     font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
     &__inner {
         display: flex;
         align-items: center;
@@ -36,6 +38,7 @@
     height: 100vh;
     padding-top: 300px;
     color: #ffffff;
+    font-family: 'Playfair Display', serif;
     text-align: center;
     box-sizing: border-box;
     &__background {
@@ -54,12 +57,20 @@
     }
     &__title {
         margin-bottom: 50px;
+        font-size: 51px;
     }
     &__title--italic {
         display: block;
         font-style: italic;
+        font-weight: normal;
     }
     &__subtitle {
+        display: block;
+        margin-bottom: 17px;
+        font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 2.8px;
         text-transform: uppercase;
     }
     &__button {
