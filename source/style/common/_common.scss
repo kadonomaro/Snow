@@ -22,7 +22,8 @@ img {
 
 
 .container {
-    @include container(1140px, 10px);
+    @include container(1140px, 15px);
+    box-sizing: border-box;
 }
 
 
