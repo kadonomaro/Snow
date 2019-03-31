@@ -34,14 +34,88 @@ img {
   z-index: -1;
 }
 
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../../fonts/PlayfairDisplay-Regular.woff2") format("woff2"), url("../../fonts/PlayfairDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("../../fonts/WorkSans-Regular.woff2") format("woff2"), url("../../fonts/WorkSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../../fonts/PlayfairDisplay-BoldItalic.woff2") format("woff2"), url("../../fonts/PlayfairDisplay-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../../fonts/PlayfairDisplay-Bold.woff2") format("woff2"), url("../../fonts/PlayfairDisplay-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../../fonts/PlayfairDisplay-Italic.woff2") format("woff2"), url("../../fonts/PlayfairDisplay-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("../../fonts/WorkSans-Medium.woff2") format("woff2"), url("../../fonts/WorkSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("../../fonts/WorkSans-Bold.woff2") format("woff2"), url("../../fonts/WorkSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 .logo__img--dark {
   display: none;
+}
+
+.button {
+  min-width: 200px;
+  padding: 18px 25px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #252525;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+}
+
+.button:hover {
+  background-color: #444444;
 }
 
 .main-header {
   position: fixed;
   z-index: 9;
   width: 100%;
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
 }
 
 .main-header__inner {
@@ -104,7 +178,12 @@ img {
   background-color: rgba(12, 12, 12, 0.6);
 }
 
+.main__title {
+  margin-bottom: 50px;
+}
+
 .main__title--italic {
+  display: block;
   font-style: italic;
 }
 

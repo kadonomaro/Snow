@@ -2,6 +2,7 @@
     position: fixed;
     z-index: 9;
     width: 100%;
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
     &__inner {
         display: flex;
         align-items: center;
@@ -52,9 +53,10 @@
         }
     }
     &__title {
-
+        margin-bottom: 50px;
     }
     &__title--italic {
+        display: block;
         font-style: italic;
     }
     &__subtitle {
