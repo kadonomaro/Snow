@@ -6,4 +6,36 @@
         background-image: url('../image/bg-pattern.jpg');
         background-size: cover;
     }
+    &__list {
+        max-width: 715px;
+        margin: 0 auto;
+    }
+}
+
+.review {
+    margin-bottom: 60px;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    line-height: 1.45;
+    text-align: center;
+    &__text {
+        margin-bottom: 17px;
+        font-style: italic;
+        letter-spacing: 0.004em;
+        &::before {
+            content: "“ ";
+            font-size: 30px;
+        }
+        &::after {
+            content: " ”";
+            font-size: 30px;
+        }
+    }
+    &__author {
+        font-family: 'Work Sans',Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        text-transform: uppercase;
+    }
 }
