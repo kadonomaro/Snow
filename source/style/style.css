@@ -328,4 +328,15 @@ img {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
 }
+
+.reviews {
+  position: relative;
+  padding: 160px 0 80px;
+  color: #ffffff;
+}
+
+.reviews__background {
+  background-image: url("../image/bg-pattern.jpg");
+  background-size: cover;
+}
 /*# sourceMappingURL=style.css.map */
