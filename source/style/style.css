@@ -38,6 +38,11 @@ img {
   margin-bottom: 35px;
   font-family: 'Playfair Display', serif;
   font-size: 39px;
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
 }
 
 @font-face {
@@ -213,7 +218,7 @@ img {
   text-align: center;
 }
 
-.about__desc {
+.about__subtitle {
   margin-bottom: 20px;
 }
 
