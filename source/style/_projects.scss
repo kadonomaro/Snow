@@ -6,8 +6,10 @@
         flex-wrap: wrap;
     }
     &__item {
-        flex: 1 0 33.3333%;
-        min-width: 300px;
+        // flex: 1 0 33.3333%;
+        @include flex-columns(4);
+        flex-grow: 1;
+        min-width: 280px;
     }
 }
 
@@ -15,6 +17,7 @@
 .project {
     position: relative;
     font-family: 'Playfair Display', serif;
+    transition: box-shadow 0.2s ease-in;
     &:hover .project__overlay {
         opacity: 1;
     }
@@ -64,5 +67,26 @@
         opacity: 0;
         transition: all 0.4s ease-in;
         transition-delay: 0.3s;
+    }
+}
+
+
+
+@include media(1023) {
+    .projects {
+    
+        &__item {
+            @include flex-columns(6);
+        }
+    }
+}
+
+
+@include media(650) {
+    .projects {
+    
+        &__item {
+            @include flex-columns(12);
+        }
     }
 }
