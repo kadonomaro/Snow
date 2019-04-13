@@ -647,4 +647,14 @@ img {
   font-style: normal;
   text-transform: uppercase;
 }
+
+.partners__list {
+  padding: 17px 0;
+}
+
+.partners__item {
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 /*# sourceMappingURL=style.css.map */
