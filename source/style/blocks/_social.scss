@@ -13,9 +13,10 @@
         font-size: 16px;
         color: inherit;
         opacity: 0.4;
-        transition: opacity 0.4s ease-in;
+        transition: all 0.3s ease-in;
         &:hover {
-            opacity: 1; 
+            transform: translateY(-2px);
+            opacity: 1;
         }
     }
 }

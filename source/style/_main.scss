@@ -12,9 +12,7 @@
     &__logo {
         margin-right: auto;
     }
-    &__nav {
 
-    }
 }
 
 .main-nav {
@@ -75,6 +73,6 @@
         text-transform: uppercase;
     }
     &__button {
-
+        min-width: 200px;
     }
 }
