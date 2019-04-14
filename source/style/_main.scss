@@ -2,6 +2,7 @@
     position: fixed;
     z-index: 9;
     width: 100%;
+    color: #bfbfbf;
     font-family: 'Work Sans', Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -12,7 +13,11 @@
     &__logo {
         margin-right: auto;
     }
+}
 
+.main-header--white {
+    color: #303030;
+    background-color: #fff;
 }
 
 
@@ -26,7 +31,7 @@
         margin-right: 30px;
     }
     &__link {
-        color: #bfbfbf;
+        color: inherit;
         text-transform: uppercase;
         text-decoration: none;
     }
@@ -121,14 +126,23 @@
 
 /*****MEDIA QUERIES*****/
 @include media(600) {
+    .main {
+        padding-top: 80px;
+        &__title {
+            font-size: 40px;
+        }
+    }
+
     .main-header {
         .logo {
             padding: 20px 0;
         }
     }
+
     .main-nav-toggle {
         display: block;
     }
+
     .main-nav {
         position: fixed;
         top: 0;
@@ -150,6 +164,9 @@
         }
         &__item {
             margin: 25px 0;
+        }
+        &__link {
+            color: #bfbfbf;
         }
         &__social {
             display: block;

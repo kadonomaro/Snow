@@ -1,6 +1,4 @@
 .about {
-    
-
     padding: 80px 0;
     text-align: center;
     &__inner {
@@ -15,5 +13,13 @@
     }
     &__img {
         display: inline-block;
+    }
+}
+
+
+
+@include media(600) {
+    .about {
+        padding: 30px 0;
     }
 }

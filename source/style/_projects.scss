@@ -1,12 +1,10 @@
 .projects {
     padding: 80px 0;
-
     &__list {
         display: flex;
         flex-wrap: wrap;
     }
     &__item {
-        // flex: 1 0 33.3333%;
         @include flex-columns(4);
         flex-grow: 1;
         min-width: 280px;
@@ -82,9 +80,9 @@
 }
 
 
-@include media(650) {
+@include media(600) {
     .projects {
-    
+        padding: 30px 0;
         &__item {
             @include flex-columns(12);
         }

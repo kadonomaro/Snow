@@ -94,11 +94,18 @@
 
 @include media(600) {
     .contacts {
+        padding: 30px 0;
         &__info {
             @include flex-columns(12);
         }
         &__form {
             @include flex-columns(12);
+        }
+    }
+
+    .contacts-form {
+        &__button {
+            width: 100%;
         }
     }
 }
