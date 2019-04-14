@@ -809,7 +809,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .projects__list {
@@ -838,9 +838,37 @@ img {
 }
 
 .projects-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects-filter__toggle {
   width: 16px;
   height: 16px;
+  margin-bottom: 20px;
   background-color: #eaeaea;
+}
+
+.projects-filter__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  list-style: none;
+}
+
+.projects-filter__item {
+  padding: 0px 17px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .project {

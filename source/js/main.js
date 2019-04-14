@@ -69,16 +69,33 @@ $(document).ready(function () {
     $(window).scroll(function () { 
         $('.main-header').addClass('main-header--light');
         $('.logo__img').attr('src', './image/logo.svg');
-    });
-
-    $('.js-filter').click(function (evt) { 
-    	evt.preventDefault();
-      
-      	$.each($('[data-type="print"]'), function (indexInArray, valueOfElement) { 
-			$(this).fadeOut();
+	});
 	
-      	});
+	$.each($('[data-filter]'), function (indexInArray, valueOfElement) { 
+		$(this).click(function () {
+			// console.log($(this).text());
+			var elem = $('[data-type=' + $(this).text() + ']');
+			$('[data-type=' + $(this).text() + ']').each(function (index, element) {
+				// console.log($(this));
+				$('[data-type]').each(function () {
+					if ($(this).data('type') !== elem.data('type')) {
+						$(this).fadeOut();
+					}
+				});
+				elem.fadeIn();
+			});
+
+		});
+	});
+
+    // $('.js-filter').click(function (evt) { 
+    // 	evt.preventDefault();
       
-    });
+    //   	$.each($('[data-type="print"]'), function (indexInArray, valueOfElement) { 
+	// 		$(this).fadeOut();
+	
+    //   	});
+      
+    // });
 	
 });
