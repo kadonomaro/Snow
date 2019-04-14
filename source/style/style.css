@@ -381,10 +381,6 @@ img {
   color: #333333;
 }
 
-.logo__img--dark {
-  display: none;
-}
-
 .button {
   padding: 18px 25px;
   color: #ffffff;
@@ -449,6 +445,8 @@ img {
   font-family: 'Work Sans', Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 500;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
 }
 
 .main-header__inner {
@@ -464,9 +462,13 @@ img {
   margin-right: auto;
 }
 
-.main-header--white {
+.main-header--light {
   color: #303030;
   background-color: #fff;
+}
+
+.main-header--light .main-nav-toggle__line {
+  background-color: #a3a3a3;
 }
 
 .main-nav {
@@ -501,7 +503,7 @@ img {
   right: 20px;
   width: 40px;
   display: none;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
 }

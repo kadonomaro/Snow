@@ -67,7 +67,8 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () { 
-        $('.main-header').addClass('main-header--white');
+        $('.main-header').addClass('main-header--light');
+        $('.logo__img').attr('src', './image/logo.svg');
     });
 
 	

@@ -6,6 +6,7 @@
     font-family: 'Work Sans', Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 500;
+    transition: background-color 0.3s ease-in;
     &__inner {
         display: flex;
         align-items: center;
@@ -14,10 +15,14 @@
         margin-right: auto;
     }
 }
-
-.main-header--white {
+.main-header--light {
     color: #303030;
     background-color: #fff;
+    .main-nav-toggle {
+        &__line {
+            background-color: #a3a3a3;
+        }
+    }
 }
 
 
@@ -48,7 +53,7 @@
     right: 20px;
     width: 40px;
     display: none;
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
     &__line {
