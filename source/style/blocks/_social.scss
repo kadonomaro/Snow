@@ -1,0 +1,21 @@
+.social {
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+    &__item {
+        padding: 3px 6px;
+    }
+    &__link {
+        display: block;
+        font-size: 16px;
+        color: inherit;
+        opacity: 0.4;
+        transition: opacity 0.4s ease-in;
+        &:hover {
+            opacity: 1; 
+        }
+    }
+}
