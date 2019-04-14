@@ -404,6 +404,10 @@ img {
   background-color: #444444;
 }
 
+.social {
+  color: #000000;
+}
+
 .social__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -431,6 +435,10 @@ img {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
   opacity: 1;
+}
+
+.social--light {
+  color: #ffffff;
 }
 
 .main-header {
@@ -474,6 +482,10 @@ img {
   color: #bfbfbf;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.main-nav__social {
+  display: none;
 }
 
 .main {
@@ -527,6 +539,61 @@ img {
 
 .main__button {
   min-width: 200px;
+}
+
+@media screen and (max-width: 600px) {
+  .main-header .logo {
+    padding: 20px 0;
+  }
+  .main-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(48, 48, 48, 0.95);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+  .main-nav__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: auto;
+  }
+  .main-nav__item {
+    margin: 25px 0;
+  }
+  .main-nav__social {
+    display: block;
+  }
+  .main-nav--active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .about {

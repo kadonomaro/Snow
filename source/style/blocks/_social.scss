@@ -1,5 +1,5 @@
 .social {
-
+    color: #000000;
     &__list {
         display: flex;
         justify-content: center;
@@ -19,4 +19,9 @@
             opacity: 1;
         }
     }
+}
+
+
+.social--light {
+    color: #ffffff;
 }
