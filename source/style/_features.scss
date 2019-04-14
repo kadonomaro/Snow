@@ -73,3 +73,14 @@
         }
     }
 }
+
+@include media(600) {
+    .features {
+        &__item {
+            @include flex-columns(12);
+            min-width: 200px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

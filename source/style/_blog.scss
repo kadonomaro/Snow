@@ -1,0 +1,28 @@
+.blog {
+    padding: 80px 0 100px;
+    background-color: #fafafa;
+}
+
+
+.blog-post {
+    padding: 0 15px;
+    &__img {
+
+    }
+    &__link {
+        
+    }
+    &__content {
+
+    }
+    &__title {
+
+    }
+    &__title-link {
+        color: #171717;
+        text-decoration: none;
+    }
+    &__text {
+        color: #5f5f5f;
+    }
+}

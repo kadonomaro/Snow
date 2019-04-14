@@ -15,6 +15,15 @@ $(document).ready(function () {
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 3,
+    });
+    
+    $('.js-blog-slider').slick({
+        infinite: true,
+        arrows: false,
+        dots: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
 	});
 	
 });
