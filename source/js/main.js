@@ -24,6 +24,14 @@ $(document).ready(function () {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-	});
+    });
+    
+
+    $('.js-menu-toggle').click(function (evt) { 
+        evt.preventDefault();
+        $(this).toggleClass('main-nav-toggle--active');
+        $('.main-nav').toggleClass('main-nav--active');
+        
+    });
 	
 });
