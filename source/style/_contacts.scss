@@ -1,0 +1,107 @@
+.contacts {
+    padding: 100px 0;
+    background-color: #f6f6f6;
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__info {
+        @include flex-columns(5);
+        padding: 30px 15px 0;
+        box-sizing: border-box;
+        
+    }
+    &__title {
+        text-align: left;
+    }
+    &__desc {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    &__list {
+        color: #5f5f5f;
+        list-style: none;
+    }
+    &__item {
+        margin-bottom: 10px;
+    }
+    &__data-title {
+        color: #171717;
+        font-weight: bold;
+    }
+    &__link {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.2s linear;
+        &:hover {
+            color: #0e0e0e;
+        }
+    }
+    &__form {
+        @include flex-columns(7);
+        padding: 30px 15px 0;
+        box-sizing: border-box;
+    }
+}
+
+
+.contacts-form {
+    display: flex;
+    flex-wrap: wrap;
+    &__input {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 16px 22px;
+        font-family: inherit;
+        font-size: 14px;
+        border: none;
+        box-sizing: border-box;
+    }
+    &__name, &__email {
+        width: calc(50% - 15px);
+    }
+    &__name {
+        margin-right: 30px;
+    }
+    &__comment {
+        resize: vertical;
+    }
+    &__button {
+        min-width: auto;
+    }
+}
+
+
+@include media(1023) {
+    .contacts {
+        &__info {
+            @include flex-columns(6);
+        }
+        &__form {
+            @include flex-columns(6);
+        }
+    }
+
+    .contacts-form {
+
+        &__name, &__email {
+            width: 100%;
+        }
+        &__name {
+            margin-right: 0;
+        }
+    } 
+}
+
+
+@include media(600) {
+    .contacts {
+        &__info {
+            @include flex-columns(12);
+        }
+        &__form {
+            @include flex-columns(12);
+        }
+    }
+}
