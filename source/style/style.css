@@ -4,6 +4,10 @@ body, h1, h2, h3, h4, h5, h6, p, ul, form, blockquote {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -798,6 +802,16 @@ img {
   padding: 80px 0;
 }
 
+.projects__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
 .projects__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -816,6 +830,17 @@ img {
       -ms-flex-positive: 1;
           flex-grow: 1;
   min-width: 280px;
+}
+
+.projects--gray {
+  padding: 120px 0 80px;
+  background-color: #f6f6f6;
+}
+
+.projects-filter {
+  width: 16px;
+  height: 16px;
+  background-color: #eaeaea;
 }
 
 .project {

@@ -71,5 +71,14 @@ $(document).ready(function () {
         $('.logo__img').attr('src', './image/logo.svg');
     });
 
+    $('.js-filter').click(function (evt) { 
+    	evt.preventDefault();
+      
+      	$.each($('[data-type="print"]'), function (indexInArray, valueOfElement) { 
+			$(this).fadeOut();
+	
+      	});
+      
+    });
 	
 });
