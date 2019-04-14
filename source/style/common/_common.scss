@@ -54,3 +54,8 @@ img {
 }
 
 
+@include media(600) {
+    .section-title {
+        font-size: 28px;
+    }
+}

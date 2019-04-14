@@ -52,6 +52,12 @@ img {
   text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+  .section-title {
+    font-size: 28px;
+  }
+}
+
 @font-face {
   font-family: 'Playfair Display';
   src: url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Regular.woff") format("woff");
@@ -596,7 +602,7 @@ img {
 /*****MEDIA QUERIES*****/
 @media screen and (max-width: 600px) {
   .main {
-    padding-top: 80px;
+    padding-top: 100px;
   }
   .main__title {
     font-size: 40px;
@@ -965,6 +971,16 @@ img {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 600px) {
+  .reviews {
+    padding: 30px 0;
+  }
+  .review {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}
+
 .partners__list {
   padding: 17px 0;
 }
@@ -973,6 +989,12 @@ img {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+  .partners__item {
+    padding: 5px;
+  }
 }
 
 .blog {
