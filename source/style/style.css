@@ -495,12 +495,106 @@ img {
   text-align: center;
 }
 
+.about__inner {
+  max-width: 730px;
+  margin: 0 auto;
+}
+
 .about__subtitle {
   margin-bottom: 20px;
 }
 
 .about__img {
   display: inline-block;
+}
+
+.features {
+  position: relative;
+  padding: 95px 0;
+  color: #ffffff;
+}
+
+.features__background {
+  background-image: url("../image/bg-pattern.jpg");
+  background-size: cover;
+}
+
+.features__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.features__item {
+  -ms-flex-preferred-size: calc((100% / 12 * 3) - (0px * 2));
+      flex-basis: calc((100% / 12 * 3) - (0px * 2));
+  max-width: calc((100% / 12 * 3) - (0px * 2));
+  margin-right: 0px;
+  margin-left: 0px;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.feature {
+  position: relative;
+  padding-left: 70px;
+  font-weight: 500;
+}
+
+.feature__title {
+  display: block;
+  font-size: 18px;
+}
+
+.feature__subtitle {
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.feature::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.feature--suitcase::before {
+  background-image: url("../image/icons/suitcase.svg");
+}
+
+.feature--clock::before {
+  background-image: url("../image/icons/clock.svg");
+}
+
+.feature--stars::before {
+  background-image: url("../image/icons/star.svg");
+}
+
+.feature--likes::before {
+  background-image: url("../image/icons/heart.svg");
+}
+
+@media screen and (max-width: 1023px) {
+  .features__item {
+    -ms-flex-preferred-size: calc((100% / 12 * 6) - (0px * 2));
+        flex-basis: calc((100% / 12 * 6) - (0px * 2));
+    max-width: calc((100% / 12 * 6) - (0px * 2));
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
 }
 
 .projects {
