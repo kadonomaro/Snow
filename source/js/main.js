@@ -74,15 +74,19 @@ $(document).ready(function () {
 	$.each($('[data-filter]'), function (indexInArray, valueOfElement) { 
 		$(this).click(function () {
 			// console.log($(this).text());
-			var elem = $('[data-type=' + $(this).text() + ']');
+      var elem = $('[data-type=' + $(this).text() + ']');
 			$('[data-type=' + $(this).text() + ']').each(function (index, element) {
 				// console.log($(this));
 				$('[data-type]').each(function () {
 					if ($(this).data('type') !== elem.data('type')) {
-						$(this).fadeOut();
+            $(this).hide(1000);
+            // var that = $(this);
+            // setTimeout(function () {
+            //   $(that).hide(1000);
+            // },500);
 					}
-				});
-				elem.fadeIn();
+        });
+				elem.show(1200);
 			});
 
 		});
