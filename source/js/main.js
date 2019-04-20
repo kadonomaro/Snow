@@ -95,17 +95,22 @@ $(document).ready(function () {
   /* filter portfolio items */
 	$.each($('[data-filter]'), function () { 
 		$(this).click(function () {
-			// console.log($(this).text());
-      	var elem = $('[data-type=' + $(this).text() + ']');
-			elem.each(function () {
-				// console.log($(this));
+			if ($(this).data('filter') === 'all') {
 				$('[data-type]').each(function () {
-					if ($(this).data('type') !== elem.data('type')) {
-            			$(this).hide(1000);
-					}
+					$(this).show(1200);
         		});
-				elem.show(1200);
-			});
+			} else {
+				var filterElement = $('[data-type=' + $(this).text() + ']');
+				filterElement.each(function () {
+					$('[data-type]').each(function () {
+						if ($(this).data('type') !== filterElement.data('type')) {
+							$(this).hide(1000);
+						}
+					});
+					filterElement.show(1200);
+				});
+			}
+
 		});
 	});
 
