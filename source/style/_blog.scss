@@ -4,6 +4,10 @@
     &__list {
         padding-bottom: 20px;
     }
+    &__list--center {
+        @include flex-columns(8);
+        margin: 0 auto;
+    }
 }
 
 
@@ -72,5 +76,8 @@
 @include media(600) {
     .blog {
         padding: 30px 0;
+        &__list--center {
+            @include flex-columns(12);
+        }
     }
 }
