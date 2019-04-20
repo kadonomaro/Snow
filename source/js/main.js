@@ -111,5 +111,11 @@ $(document).ready(function () {
 		});
 	});
 
+	/* scroll down */
+	$('.js-scroll-down').click(function () { 
+		$('html').animate({
+			scrollTop: window.innerHeight - $('.main-header').height()
+		},'slow');
+	});
 	
 });
