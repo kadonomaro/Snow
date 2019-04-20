@@ -71,9 +71,11 @@ $(document).ready(function () {
   	$(window).scroll(function () {
 		if ($(this).scrollTop() >= 1) {
 			$('.main-header').addClass('main-header--light');
+			$('.main-nav').addClass('main-nav--light');
 			$('.logo__img').attr('src', './image/logo.svg');
 		} else {
 			$('.main-header').removeClass('main-header--light');
+			$('.main-nav').removeClass('main-nav--light');
 			$('.logo__img').attr('src', './image/logo-light.svg');
 		}
 

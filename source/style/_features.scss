@@ -69,13 +69,17 @@
     .features {
         &__item {
             @include flex-columns(6);
-            margin-bottom: 20px;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
         }
     }
 }
 
 @include media(600) {
     .features {
+        padding: 30px 0;
         &__item {
             @include flex-columns(12);
             min-width: 200px;
