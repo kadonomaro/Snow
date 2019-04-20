@@ -653,7 +653,7 @@ img {
 
 .main {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 300px;
   color: #ffffff;
   font-family: 'Playfair Display', serif;
@@ -1134,10 +1134,6 @@ img {
   margin-bottom: 30px;
 }
 
-.blog__list {
-  padding-bottom: 20px;
-}
-
 .blog__list--center {
   -ms-flex-preferred-size: calc((100% / 12 * 8) - (0px * 2));
       flex-basis: calc((100% / 12 * 8) - (0px * 2));
@@ -1149,6 +1145,7 @@ img {
 
 .blog__item {
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .blog--gray {
@@ -1228,6 +1225,11 @@ img {
 .blog-post__text {
   color: #5f5f5f;
   font-size: 15px;
+  letter-spacing: 0.04em;
+}
+
+.blog-post__text--large p:not(:last-child) {
+  margin-bottom: 1.6rem;
 }
 
 @media screen and (max-width: 1023px) {

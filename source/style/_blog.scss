@@ -4,15 +4,13 @@
     &__filter {
         margin-bottom: 30px;
     }
-    &__list {
-        padding-bottom: 20px;
-    }
     &__list--center {
         @include flex-columns(8);
         margin: 0 auto;
     }
     &__item {
         width: 100%;
+        margin-bottom: 30px;
     }
 }
 .blog--gray {
@@ -79,8 +77,15 @@
     &__text {
         color: #5f5f5f;
         font-size: 15px;
+        letter-spacing: 0.04em;
+    }
+    &__text--large p {
+        &:not(:last-child) {
+            margin-bottom: 1.6rem;
+        }
     }
 }
+
 
 
 @include media(1023) {
