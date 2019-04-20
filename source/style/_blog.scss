@@ -1,6 +1,9 @@
 .blog {
     padding: 80px 0 100px;
     background-color: #fafafa;
+    &__filter {
+        margin-bottom: 30px;
+    }
     &__list {
         padding-bottom: 20px;
     }
@@ -8,6 +11,14 @@
         @include flex-columns(8);
         margin: 0 auto;
     }
+    &__item {
+        width: 100%;
+    }
+}
+.blog--gray {
+    flex-grow: 1;
+    padding: 120px 0 80px;
+    background-color: #f6f6f6;
 }
 
 
@@ -72,12 +83,29 @@
 }
 
 
+@include media(1023) {
+
+    .blog {
+
+        &__list--center {
+            @include flex-columns(10);
+            margin: 0 auto;
+        }
+    }
+
+}
 
 @include media(600) {
     .blog {
         padding: 30px 0;
+        &__filter {
+            margin-bottom: 10px;
+        }
         &__list--center {
             @include flex-columns(12);
         }
+    }
+    .blog--gray {
+        padding-top: 80px;
     }
 }
