@@ -97,7 +97,7 @@ $(document).ready(function () {
 		$(this).click(function () {
 			// console.log($(this).text());
       	var elem = $('[data-type=' + $(this).text() + ']');
-			elem.each(function (index, element) {
+			elem.each(function () {
 				// console.log($(this));
 				$('[data-type]').each(function () {
 					if ($(this).data('type') !== elem.data('type')) {
