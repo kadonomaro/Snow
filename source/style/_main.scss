@@ -39,6 +39,10 @@
         color: inherit;
         text-transform: uppercase;
         text-decoration: none;
+        transition: color 0.2s ease-in;
+        &:hover {
+            color: #ffffff;
+        }
     }
     &__social {
         display: none;

@@ -500,6 +500,12 @@ img {
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+.main-nav__link:hover {
+  color: #ffffff;
 }
 
 .main-nav__social {
@@ -803,12 +809,6 @@ img {
 }
 
 .projects__filter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -867,8 +867,15 @@ img {
 
 .projects-filter__item {
   padding: 0px 17px;
+  color: #5f5f5f;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+}
+
+.projects-filter__item:hover {
+  color: #000000;
 }
 
 .project {
