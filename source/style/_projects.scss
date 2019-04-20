@@ -1,8 +1,6 @@
 .projects {
     padding: 80px 0;
     &__filter {
-        // display: flex;
-        // justify-content: center;
         margin-bottom: 30px;
     }
     &__list {
@@ -123,6 +121,9 @@
 @include media(600) {
     .projects {
         padding: 30px 0;
+        &__filter {
+            margin-bottom: 10px;
+        }
         &__item {
             @include flex-columns(12);
         }
@@ -130,14 +131,18 @@
     .projects--gray {
         padding-top: 80px;
     }
+
     .projects-filter {
+        &__toggle {
+            margin-bottom: 10px;
+        }
         &__list {
             flex-wrap: wrap;
             margin: 0 -5px;
         }
         &__item {
             position: relative;
-            flex: 1 1 45%;
+            flex: 1 1 calc(50% - 10px);
             margin: 5px;
             padding: 8px 12px;
             text-align: center;
@@ -148,9 +153,8 @@
                 width: 100%;
             }
             &::before {
-                position: absolute;
-                // z-index: -1;
                 content: '';
+                position: absolute;
                 top: 0;
                 left: 0;
                 width: 0;
