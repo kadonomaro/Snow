@@ -7,6 +7,10 @@
         height: 16px;
         margin-bottom: 20px;
         background-color: #eaeaea;
+        background-image: 
+                linear-gradient(90deg, rgba(#000000, 0.3) 35%, transparent 35%, transparent 65%, rgba(#000000, 0.3) 65%),
+                linear-gradient(rgba(#000000, 0.3) 35%, transparent 35%, transparent 65%, rgba(#000000, 0.3) 65%);
+
         cursor: pointer;
     }
     &__list {
