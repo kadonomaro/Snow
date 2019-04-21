@@ -83,6 +83,7 @@ $(document).ready(function () {
 
 	});
 	
+	
 	if ($('.page').hasClass('js-other-page')) {
 		$('.main-header').addClass('main-header--light');
 		$('.main-nav').addClass('main-nav--light');
@@ -97,10 +98,10 @@ $(document).ready(function () {
 	});
 	
 	
-  
   /* filter portfolio items */
-	$.each($('[data-filter]'), function () { 
-		$(this).click(function (evt) {
+	$.each($('[data-filter]'), function () {
+
+		$(this).on('click tap', function (evt) {
 			evt.preventDefault();
 			if ($(this).data('filter') === 'all') {
 				$('[data-type]').each(function () {
@@ -122,43 +123,31 @@ $(document).ready(function () {
 			}
 		});
 
-		$(this).on('tap', function (evt) {
-			evt.preventDefault();
-			if ($(this).data('filter') === 'all') {
-				$('[data-type]').each(function () {
-					$(this).slideDown(900);
-					// $(this).show(900);
-        		});
-			} else {
-				var filterElement = $('[data-type=' + $(this).text() + ']');
-				filterElement.each(function () {
-					$('[data-type]').each(function () {
-						if ($(this).data('type') !== filterElement.data('type')) {
-							$(this).slideUp(700);
-							// $(this).hide(700);
-						}
-					});
-					filterElement.slideDown(900);
-					// filterElement.show(900);
-				});
-			}
-		});
 	});
 
-	function filterItems() {
 
-	}
-
-	/* scroll down */
-	// $('.js-scroll-down').click(function () { 
-	// 	$('html').animate({
-	// 		scrollTop: window.innerHeight - $('.main-header').height()
-	// 	},'slow');
-	// });
+	/* scroll to 2nd screen */
 	$('.js-scroll-down').click(function (evt) {
 		evt.preventDefault();
 		$('html').scrollTop(window.innerHeight - $('.main-header').height());
 	});
+
+
+	/* custom placeholder with animation */
+	$('.js-input').focus(function (evt) { 
+		evt.preventDefault();
+		$(this).next('span').addClass('contacts-form__placeholder--active');
+	});
+
+	$('.js-input').blur(function (evt) { 
+		evt.preventDefault();
+		if ($(this).val() === '') {
+			$(this).next('span').removeClass('contacts-form__placeholder--active');
+		}
+		
+	});
+
+
 	
 });
 

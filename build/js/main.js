@@ -83,6 +83,7 @@ $(document).ready(function () {
 
 	});
 	
+	
 	if ($('.page').hasClass('js-other-page')) {
 		$('.main-header').addClass('main-header--light');
 		$('.main-nav').addClass('main-nav--light');
@@ -100,29 +101,7 @@ $(document).ready(function () {
   /* filter portfolio items */
 	$.each($('[data-filter]'), function () {
 
-		// $(this).click(function (evt) {
-		// 	evt.preventDefault();
-		// 	if ($(this).data('filter') === 'all') {
-		// 		$('[data-type]').each(function () {
-		// 			$(this).slideDown(900);
-		// 			// $(this).show(900);
-        // 		});
-		// 	} else {
-		// 		var filterElement = $('[data-type=' + $(this).text() + ']');
-		// 		filterElement.each(function () {
-		// 			$('[data-type]').each(function () {
-		// 				if ($(this).data('type') !== filterElement.data('type')) {
-		// 					$(this).slideUp(700);
-		// 					// $(this).hide(700);
-		// 				}
-		// 			});
-		// 			filterElement.slideDown(900);
-		// 			// filterElement.show(900);
-		// 		});
-		// 	}
-		// });
-
-		$(this).on('click touchstart', function (evt) {
+		$(this).on('click tap', function (evt) {
 			evt.preventDefault();
 			if ($(this).data('filter') === 'all') {
 				$('[data-type]').each(function () {
@@ -143,13 +122,16 @@ $(document).ready(function () {
 				});
 			}
 		});
+
 	});
+
 
 	/* scroll to 2nd screen */
 	$('.js-scroll-down').click(function (evt) {
 		evt.preventDefault();
 		$('html').scrollTop(window.innerHeight - $('.main-header').height());
 	});
+
 
 	/* custom placeholder with animation */
 	$('.js-input').focus(function (evt) { 

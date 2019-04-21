@@ -11,7 +11,6 @@
 </head>
 <body class="page js-main-page">
 
-
     <header class="main-header">
         <div class="container">
             <div class="main-header__inner">
@@ -141,7 +140,7 @@
             </div>
 
         </div><!--container-->
-    </section><!--сделать плавное увеличение чисел-->
+    </section>
 
 
     <section class="projects">
@@ -457,10 +456,22 @@
 
                 <div class="contacts__form">
                     <form action="#" class="contacts-form">
-                        <input type="text" name="contacts-name" class="contacts-form__name contacts-form__input" placeholder="Your Name">
-                        <input type="email" name="contacts-email" class="contacts-form__email contacts-form__input" placeholder="Your Email">
-                        <input type="text" name="contacts-title" class="contacts-form__title contacts-form__input" placeholder="Your Title">
-                        <textarea name="contacts-comment" rows="8" class="contacts-form__comment contacts-form__input" placeholder="Your Comment"></textarea>
+                        <label class="contacts-form__label contacts-form__label--name">
+                            <input type="text" name="contacts-name" class="contacts-form__input js-input">
+                            <span class="contacts-form__placeholder js-input-placeholder">Your Name</span>
+                        </label>
+                        <label class="contacts-form__label contacts-form__label--email">
+                            <input type="email" name="contacts-email" class="contacts-form__input js-input">
+                            <span class="contacts-form__placeholder js-input-placeholder">Your Email</span>
+                        </label>
+                        <label class="contacts-form__label">
+                            <input type="text" name="contacts-title" class="contacts-form__input js-input">
+                            <span class="contacts-form__placeholder js-input-placeholder">Your Title</span>
+                        </label>
+                        <label class="contacts-form__label">
+                            <textarea name="contacts-comment" rows="8" class="contacts-form__comment contacts-form__input js-input"></textarea>
+                            <span class="contacts-form__placeholder js-input-placeholder">Your Comment</span>
+                        </label>
                         <button class="contacts-form__button button">send message</button>
                     </form>
                 </div>
@@ -506,7 +517,6 @@
     
         </div><!--container-->
     </footer>
-    
     
     <script src="libs/jquery-3.3.1.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>

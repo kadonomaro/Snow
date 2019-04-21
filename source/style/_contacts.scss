@@ -69,7 +69,8 @@
     }
     &__placeholder--active {
         font-size: 12px;
-        transform: translateY(-2.5em);
+        font-weight: bold;
+        transform: translateY(-2.6em);
     }
     &__label--name, &__label--email {
         width: calc(50% - 15px);
