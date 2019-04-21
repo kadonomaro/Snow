@@ -144,9 +144,14 @@ $(document).ready(function () {
 		if ($(this).val() === '') {
 			$(this).next('span').removeClass('contacts-form__placeholder--active');
 		}
-		
 	});
-
+	
+	// var vh = window.innerHeight * 0.01;
+	// document.documentElement.style.setProperty('--vh', `${vh}px`);
+	// $(window).resize(function () { 
+		
+	// 	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	// });
 
 	
 });

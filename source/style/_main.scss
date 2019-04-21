@@ -102,7 +102,8 @@ $link-color-light--hover: #ffffff;
 .main {
     position: relative;
     min-height: 100vh;
-    padding-top: 300px;
+    // min-height: calc(var(--vh, 1vh) * 100); //chrome android height fix
+    padding-top: 15.625%;
     color: #ffffff;
     font-family: 'Playfair Display', serif;
     text-align: center;
@@ -150,8 +151,13 @@ $link-color-light--hover: #ffffff;
 @include media(600) {
     .main {
         padding-top: 100px;
+        @supports (-webkit-appearance:none) {
+            min-height: calc(100vh - 56px);
+        }
         &__title {
+            margin-bottom: 30px;
             font-size: 40px;
+            // line-height: 1;
         }
     }
 

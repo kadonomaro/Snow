@@ -113,4 +113,11 @@
     .blog--gray {
         padding-top: 90px;
     }
+    
+    .blog-post {
+        padding: 0;
+        &__content {
+            padding: 15px 10px;
+        }
+    }
 }
