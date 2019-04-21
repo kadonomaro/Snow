@@ -104,28 +104,50 @@ $(document).ready(function () {
 			evt.preventDefault();
 			if ($(this).data('filter') === 'all') {
 				$('[data-type]').each(function () {
-					// $(this).slideDown(900);
-					console.dir($(this));
-					$(this).show(900);
+					$(this).slideDown(900);
+					// $(this).show(900);
         		});
 			} else {
 				var filterElement = $('[data-type=' + $(this).text() + ']');
 				filterElement.each(function () {
 					$('[data-type]').each(function () {
 						if ($(this).data('type') !== filterElement.data('type')) {
-							// $(this).slideUp(700);
-
-							$(this).hide(700);
+							$(this).slideUp(700);
+							// $(this).hide(700);
 						}
 					});
-					// filterElement.slideDown(900);
-
-					filterElement.show(900);
+					filterElement.slideDown(900);
+					// filterElement.show(900);
 				});
 			}
+		});
 
+		$(this).on('tap', function (evt) {
+			evt.preventDefault();
+			if ($(this).data('filter') === 'all') {
+				$('[data-type]').each(function () {
+					$(this).slideDown(900);
+					// $(this).show(900);
+        		});
+			} else {
+				var filterElement = $('[data-type=' + $(this).text() + ']');
+				filterElement.each(function () {
+					$('[data-type]').each(function () {
+						if ($(this).data('type') !== filterElement.data('type')) {
+							$(this).slideUp(700);
+							// $(this).hide(700);
+						}
+					});
+					filterElement.slideDown(900);
+					// filterElement.show(900);
+				});
+			}
 		});
 	});
+
+	function filterItems() {
+
+	}
 
 	/* scroll down */
 	// $('.js-scroll-down').click(function () { 
