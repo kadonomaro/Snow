@@ -48,23 +48,44 @@
 .contacts-form {
     display: flex;
     flex-wrap: wrap;
-    &__input {
+    &__label {
+        position: relative;
         display: block;
         width: 100%;
         margin-bottom: 30px;
-        padding: 16px 22px;
         font-family: inherit;
         font-size: 14px;
+        // outline: 1px solid #5f5f5f;
+    }
+    &__placeholder {
+        position: absolute;
+        top: 16px;
+        left: 22px;
+        display: block;
+        color: #5f5f5f;
+        line-height: 1;
+        letter-spacing: 0.04em;
+        transition: all 0.3s ease-in;
+    }
+    &__placeholder--active {
+        font-size: 12px;
+        transform: translateY(-2.5em);
+    }
+    &__label--name, &__label--email {
+        width: calc(50% - 15px);
+    }
+    &__label--name {
+        margin-right: 30px;
+    }
+    &__input {
+        display: block;
+        width: 100%;
+        padding: 16px 22px;
         border: none;
         box-sizing: border-box;
     }
-    &__name, &__email {
-        width: calc(50% - 15px);
-    }
-    &__name {
-        margin-right: 30px;
-    }
     &__comment {
+        min-height: 70px;
         resize: vertical;
     }
 }
@@ -82,10 +103,10 @@
 
     .contacts-form {
 
-        &__name, &__email {
+        &__label--name, &__label--email {
             width: 100%;
         }
-        &__name {
+        &__label--name {
             margin-right: 0;
         }
     } 
