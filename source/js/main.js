@@ -104,17 +104,17 @@ $(document).ready(function () {
 		$(this).click(function () {
 			if ($(this).data('filter') === 'all') {
 				$('[data-type]').each(function () {
-					$(this).slideDown(1200);
+					$(this).slideDown(900);
         		});
 			} else {
 				var filterElement = $('[data-type=' + $(this).text() + ']');
 				filterElement.each(function () {
 					$('[data-type]').each(function () {
 						if ($(this).data('type') !== filterElement.data('type')) {
-							$(this).slideUp(1000);
+							$(this).slideUp(700);
 						}
 					});
-					filterElement.slideDown(1200);
+					filterElement.slideDown(900);
 				});
 			}
 
@@ -133,3 +133,4 @@ $(document).ready(function () {
 	});
 	
 });
+
