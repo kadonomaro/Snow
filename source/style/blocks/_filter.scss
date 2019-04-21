@@ -6,12 +6,18 @@
         width: 20px;
         height: 20px;
         margin-bottom: 20px;
-        background-color: #eaeaea;
         background-image: 
-                linear-gradient(90deg, rgba(#000000, 0.3) 35%, transparent 35%, transparent 65%, rgba(#000000, 0.3) 65%),
-                linear-gradient(rgba(#000000, 0.3) 35%, transparent 35%, transparent 65%, rgba(#000000, 0.3) 65%);
-
+		        linear-gradient(90deg, #333333 50%, transparent 50%),
+		        linear-gradient(90deg, transparent 50%, transparent 50%),
+		        linear-gradient(90deg, #333333 50%, transparent 50%);
+        background-position: 0 0, 0 33.333%, 0 100%;
+        background-repeat: repeat-x;
+        background-size: 66.6666% 33.3333%, 66.6666% 33.3333%, 66.6666% 33.3333%;
         cursor: pointer;
+        transition: all 0.3s ease-in;
+        &:hover {
+            background-position: 0 50%, 0 33.333%, 0 50%;
+        }
     }
     &__list {
         display: flex;
@@ -37,6 +43,8 @@
 
     .filter {
         &__toggle {
+            width: 30px;
+            height: 30px;
             margin-bottom: 10px;
         }
         &__list {

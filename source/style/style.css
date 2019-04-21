@@ -474,10 +474,18 @@ img {
   width: 20px;
   height: 20px;
   margin-bottom: 20px;
-  background-color: #eaeaea;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(35%, rgba(0, 0, 0, 0.3)), color-stop(35%, transparent), color-stop(65%, transparent), color-stop(65%, rgba(0, 0, 0, 0.3))), -webkit-gradient(linear, left top, left bottom, color-stop(35%, rgba(0, 0, 0, 0.3)), color-stop(35%, transparent), color-stop(65%, transparent), color-stop(65%, rgba(0, 0, 0, 0.3)));
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 35%, transparent 35%, transparent 65%, rgba(0, 0, 0, 0.3) 65%), linear-gradient(rgba(0, 0, 0, 0.3) 35%, transparent 35%, transparent 65%, rgba(0, 0, 0, 0.3) 65%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #333333), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, #333333), color-stop(50%, transparent));
+  background-image: linear-gradient(90deg, #333333 50%, transparent 50%), linear-gradient(90deg, transparent 50%, transparent 50%), linear-gradient(90deg, #333333 50%, transparent 50%);
+  background-position: 0 0, 0 33.333%, 0 100%;
+  background-repeat: repeat-x;
+  background-size: 66.6666% 33.3333%, 66.6666% 33.3333%, 66.6666% 33.3333%;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.filter__toggle:hover {
+  background-position: 0 50%, 0 33.333%, 0 50%;
 }
 
 .filter__list {
@@ -504,6 +512,8 @@ img {
 
 @media screen and (max-width: 600px) {
   .filter__toggle {
+    width: 30px;
+    height: 30px;
     margin-bottom: 10px;
   }
   .filter__list {

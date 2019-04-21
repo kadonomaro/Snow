@@ -63,7 +63,6 @@ $(document).ready(function () {
         evt.preventDefault();
         $(this).toggleClass('main-nav-toggle--active');
         $('.main-nav').toggleClass('main-nav--active');
-        
     });
 
   
