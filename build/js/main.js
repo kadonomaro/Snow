@@ -90,6 +90,7 @@ $(document).ready(function () {
 		$('.logo__img').attr('src', './image/logo.svg');
 	}
 	
+	
 	/* show/hide filter button */
 	$('.js-filter-toggle').click(function (evt) { 
 		evt.preventDefault();
