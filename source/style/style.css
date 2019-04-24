@@ -487,7 +487,7 @@ img {
   transition: all 0.3s ease-in;
 }
 
-.filter__toggle:hover {
+.filter__toggle--active {
   background-position: 0 50%, 0 33.333%, 0 50%;
 }
 
@@ -556,6 +556,9 @@ img {
     transition: width 0.3s ease-in;
     opacity: 0.5;
   }
+  .filter__link--active::before {
+    width: 100%;
+  }
 }
 
 .scroll-down {
@@ -574,11 +577,6 @@ img {
   transition: all 0.3s ease-in;
   opacity: 0.6;
   cursor: pointer;
-}
-
-.scroll-down:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  opacity: 1;
 }
 
 .scroll-down::before {

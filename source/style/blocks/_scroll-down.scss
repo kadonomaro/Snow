@@ -12,10 +12,10 @@
     transition: all 0.3s ease-in;
     opacity: 0.6;
     cursor: pointer;
-    &:hover {
-        background-color: rgba($color: #ffffff, $alpha: 0.2);
-        opacity: 1;
-    }
+    // &:hover {
+    //     background-color: rgba($color: #ffffff, $alpha: 0.2);
+    //     opacity: 1;
+    // }
     &::before {
         content: '';
         position: absolute;

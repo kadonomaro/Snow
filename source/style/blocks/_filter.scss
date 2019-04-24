@@ -15,9 +15,9 @@
         background-size: 66.6666% 33.3333%, 66.6666% 33.3333%, 66.6666% 33.3333%;
         cursor: pointer;
         transition: all 0.3s ease-in;
-        &:hover {
-            background-position: 0 50%, 0 33.333%, 0 50%;
-        }
+    }
+    &__toggle--active {
+        background-position: 0 50%, 0 33.333%, 0 50%;
     }
     &__list {
         display: flex;
@@ -77,6 +77,11 @@
                 background-color: #5f5f5f;
                 transition: width 0.3s ease-in;
                 opacity: 0.5;
+            }
+        }
+        &__link--active {
+            &::before {
+                width: 100%;
             }
         }
     }
