@@ -626,6 +626,13 @@ img {
   margin-right: auto;
 }
 
+.main-header__progress {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 5px;
+}
+
 .main-header--light {
   color: #bfbfbf;
   background-color: #fff;

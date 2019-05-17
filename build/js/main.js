@@ -65,9 +65,13 @@ $(document).ready(function () {
         $('.main-nav').toggleClass('main-nav--active');
     });
 
-  
+	
+
   /* change header after scroll */
 	$(window).scroll(function () {
+
+		
+		
 			
 		if ($('.page').hasClass('js-main-page')) {
 			if ($(this).scrollTop() >= 1) {
@@ -154,13 +158,18 @@ $(document).ready(function () {
 		}
 	});
 	
-	// var vh = window.innerHeight * 0.01;
-	// document.documentElement.style.setProperty('--vh', `${vh}px`);
-	// $(window).resize(function () { 
-		
-	// 	document.documentElement.style.setProperty('--vh', `${vh}px`);
-	// });
 
+	var progressBar = document.querySelector('.js-progress');
+	console.dir(document.body.scrollTop);
+	console.dir(document.documentElement.scrollTop);
+	
+
+	window.addEventListener('scroll', function () {
+		var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		var scrolled = (winScroll / height) * 100;
+		progressBar.value = scrolled;
+	});
 	
 });
 
