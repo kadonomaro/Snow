@@ -24,6 +24,24 @@ $link-color-light--hover: #ffffff;
         top: 0;
         width: 100%;
         height: 5px;
+        appearance: none;
+        &::-webkit-progress-bar {
+            background-color: transparent;
+            border-radius: 0;
+        }
+        &::-moz-progress-bar {
+            background-color: blue;
+            background-color: $link-color-light;
+            border-radius: 0;
+        }
+        &::-webkit-progress-value {
+            background-color: $link-color-light;
+            transition: all 0.2s linear;
+        }
+        &::-moz-progress-value {
+            transition: width 0.2s linear;
+        }
+        
     }
 }
 .main-header--light {

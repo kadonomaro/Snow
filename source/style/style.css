@@ -631,6 +631,31 @@ img {
   top: 0;
   width: 100%;
   height: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.main-header__progress::-webkit-progress-bar {
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.main-header__progress::-moz-progress-bar {
+  background-color: blue;
+  background-color: #bfbfbf;
+  border-radius: 0;
+}
+
+.main-header__progress::-webkit-progress-value {
+  background-color: #bfbfbf;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.main-header__progress::-moz-progress-value {
+  -webkit-transition: width 0.2s linear;
+  transition: width 0.2s linear;
 }
 
 .main-header--light {
