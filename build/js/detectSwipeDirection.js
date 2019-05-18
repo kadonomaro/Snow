@@ -1,13 +1,13 @@
 // swipe detection and close navigation by swipe
     /**
      * 
-     * @param {HTMLElement} targetElement 
-     * @param {string} className
+     * @param {array} targetElements
+     * @param {array} classNames
      * @param {string} direction
      * @param {boolean} removeClass
      * @param {boolean} logDirection
      */
-    export default function detectSwipeDirection(targetElement, className, direction, removeClass=false, logDirection = false) {
+    export default function detectSwipeDirection(targetElements, classNames, direction, removeClass=false, logDirection = false) {
 
         let swipe = {
             direction: '',
@@ -38,9 +38,17 @@
                 }
 
                 if (direction == this.direction && !removeClass) {
-                    targetElement.classList.add(className);
+
+                    for (let i = 0; i < targetElements.length; i++) {
+                        targetElements[i].classList.add(classNames[i]);
+                    }
+
                 } else if (direction == this.direction && removeClass) {
-                    targetElement.classList.remove(className);
+
+                    for (let i = 0; i < targetElements.length; i++) {
+                        targetElements[i].classList.remove(classNames[i]);
+                    }
+                    
                 }
 
                 if (logDirection) {
@@ -49,6 +57,6 @@
             }
         };
 
-        targetElement.addEventListener('touchstart', swipe.startTouch, false);
-        targetElement.addEventListener('touchmove', swipe.moveTouch, false);
+        targetElements[0].addEventListener('touchstart', swipe.startTouch, false);
+        targetElements[0].addEventListener('touchmove', swipe.moveTouch, false);
     }

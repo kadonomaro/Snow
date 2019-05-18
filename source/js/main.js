@@ -1,7 +1,13 @@
 import detectSwipeDirection from "./detectSwipeDirection.js";
 
-detectSwipeDirection(document.querySelector('.main-nav'), 'main-nav--active', 'left', true);
-detectSwipeDirection(document.querySelector('.js-menu-toggle'), 'main-nav-toggle--active', 'left', true);
+
+detectSwipeDirection(
+	[document.querySelector('.main-nav'), document.querySelector('.js-menu-toggle')],
+	['main-nav--active', 'main-nav-toggle--active'],
+	'left',
+	true
+);
+
 
 $(document).ready(function () {
 	/* change header style depending on pages */
