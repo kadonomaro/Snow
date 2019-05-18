@@ -1,4 +1,16 @@
+import detectSwipeDirection from "./detectSwipeDirection.js";
+
+detectSwipeDirection(document.querySelector('.main-nav'), 'main-nav--active', 'left', true);
+detectSwipeDirection(document.querySelector('.js-menu-toggle'), 'main-nav-toggle--active', 'left', true);
+
 $(document).ready(function () {
+	/* change header style depending on pages */
+	if ($('.page').hasClass('js-other-page')) {
+		$('.main-header').addClass('main-header--light');
+		$('.main-nav').addClass('main-nav--light');
+		$('.logo__img').attr('src', './image/logo.svg');
+	}
+
     //init sliders
     $('.js-reviews-slider').slick({
         infinite: true,
@@ -70,9 +82,6 @@ $(document).ready(function () {
   /* change header after scroll */
 	$(window).scroll(function () {
 
-		
-		
-			
 		if ($('.page').hasClass('js-main-page')) {
 			if ($(this).scrollTop() >= 1) {
 				$('.main-header').addClass('main-header--light');
@@ -87,12 +96,6 @@ $(document).ready(function () {
 
 	});
 	
-	
-	if ($('.page').hasClass('js-other-page')) {
-		$('.main-header').addClass('main-header--light');
-		$('.main-nav').addClass('main-nav--light');
-		$('.logo__img').attr('src', './image/logo.svg');
-	}
 	
 	
 	/* show/hide filter button */
@@ -160,9 +163,6 @@ $(document).ready(function () {
 	
 
 	var progressBar = document.querySelector('.js-progress');
-	console.dir(document.body.scrollTop);
-	console.dir(document.documentElement.scrollTop);
-	
 
 	window.addEventListener('scroll', function () {
 		var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
