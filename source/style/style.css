@@ -404,6 +404,10 @@ img {
   color: #333333;
 }
 
+.logo__img--dark {
+  display: none;
+}
+
 .button {
   padding: 18px 25px;
   color: #ffffff;

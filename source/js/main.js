@@ -92,11 +92,13 @@ $(document).ready(function () {
 			if ($(this).scrollTop() >= 1) {
 				$('.main-header').addClass('main-header--light');
 				$('.main-nav').addClass('main-nav--light');
-				$('.logo__img').attr('src', './image/logo.svg');
+				$('.logo__img--dark').css('display', 'block');
+				$('.logo__img--light').css('display', 'none');
 			} else {
 				$('.main-header').removeClass('main-header--light');
 				$('.main-nav').removeClass('main-nav--light');
-				$('.logo__img').attr('src', './image/logo-light.svg');
+				$('.logo__img--dark').css('display', 'none');
+				$('.logo__img--light').css('display', 'block');
 			}
 		}
 
