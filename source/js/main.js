@@ -132,6 +132,8 @@ $(document).ready(function () {
 			if ($(this).data('filter') === 'all') {
 				$('[data-type]').each(function () {
 					$(this).slideDown(900);
+					// $(this).css('display','block').css('width', "33.333%");
+				
         		});
 			} else {
 				var filterElement = $('[data-type=' + $(this).text() + ']');

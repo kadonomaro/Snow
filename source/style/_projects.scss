@@ -6,11 +6,11 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+
     }
-    &__item {
-        @include flex-columns(4);
-        flex-grow: 1;
-        min-width: 280px;
+    &__item {        
+        width: 33.333%;
     }
 }
 .projects--gray {
@@ -82,7 +82,7 @@
     .projects {
     
         &__item {
-            @include flex-columns(6);
+            width: 50%;
         }
     }
 }
@@ -96,7 +96,7 @@
             margin-bottom: 10px;
         }
         &__item {
-            @include flex-columns(12);
+            width: 100%;
         }
     }
     .projects--gray {
